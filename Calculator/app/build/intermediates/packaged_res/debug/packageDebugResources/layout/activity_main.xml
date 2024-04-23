@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Layout inspired by https://www.youtube.com/watch?v=2hSHgungOKI-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/almostBlack"
+    tools:context=".MainActivity"
+    tools:ignore="HardcodedText">
+
+    <TextView
+        android:id="@+id/term"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeMaxTextSize="100sp"
+        android:autoSizeStepGranularity="2sp"
+        android:layout_weight="1"
+        android:text=""
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:textAlignment="textStart"
+        android:paddingStart="15sp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:id="@+id/historyScrollView">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/historyLinearLayout"/>
+
+    </ScrollView>
+
+    <LinearLayout
+        style="@style/buttonRow">
+        <Button
+            android:id="@+id/buttonRemoveAll"
+            style="@style/buttonOperator"
+            android:text="AC"/>
+        <Button
+            android:id="@+id/buttonRemove"
+            style="@style/buttonOperator"
+            android:text="\u232b"/>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/buttonRow">
+        <Button
+            android:id="@+id/button1"
+            style="@style/buttonNumber"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/button2"
+            style="@style/buttonNumber"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/button3"
+            style="@style/buttonNumber"
+            android:text="3" />
+        <Button
+            android:id="@+id/buttonDivide"
+            style="@style/buttonOperator"
+            android:text="/"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        style="@style/buttonRow">
+        <Button
+            android:id="@+id/button4"
+            style="@style/buttonNumber"
+            android:text="4" />
+        <Button
+            android:id="@+id/button5"
+            style="@style/buttonNumber"
+            android:text="5" />
+
+        <Button
+            android:id="@+id/button6"
+            style="@style/buttonNumber"
+            android:text="6" />
+        <Button
+            android:id="@+id/buttonMultiply"
+            style="@style/buttonOperator"
+            android:text="*" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/buttonRow">
+        <Button
+            android:id="@+id/button7"
+            style="@style/buttonNumber"
+            android:text="7" />
+
+        <Button
+            android:id="@+id/button8"
+            style="@style/buttonNumber"
+            android:text="8" />
+        <Button
+            android:id="@+id/button9"
+            style="@style/buttonNumber"
+            android:text="9" />
+        <Button
+            android:id="@+id/buttonSubtract"
+            style="@style/buttonOperator"
+            android:text="-" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/buttonRow">
+
+        <Button
+            android:id="@+id/button0"
+            style="@style/buttonNumber"
+            android:text="0" />
+        <Button
+            android:id="@+id/buttonDot"
+            style="@style/buttonNumber"
+            android:text="." />
+        <Button
+            android:id="@+id/buttonEquals"
+            style="@style/buttonOperator"
+            android:text="=" />
+
+
+        <Button
+            android:id="@+id/buttonAdd"
+            style="@style/buttonOperator"
+            android:text="+" />
+    </LinearLayout>
+    <LinearLayout
+        style="@style/buttonRow">
+
+        <Button
+            android:id="@+id/exportHistory"
+            style="@style/buttonOperator"
+            android:layout_weight="2"
+            android:text="Export History" />
+
+        <Button
+            android:id="@+id/buttonOpenBracket"
+            style="@style/buttonOperator"
+            android:text="("/>
+
+        <Button
+            android:id="@+id/buttonCloseBracket"
+            style="@style/buttonOperator"
+            android:text=")"/>
+
+    </LinearLayout>
+
+</LinearLayout>
